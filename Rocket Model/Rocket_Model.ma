@@ -1,6 +1,6 @@
 //Maya ASCII 2020 scene
 //Name: Rocket_Model.ma
-//Last modified: Sat, Sep 05, 2020 05:34:16 PM
+//Last modified: Sat, Sep 05, 2020 05:49:11 PM
 //Codeset: 1252
 requires maya "2020";
 requires "mtoa" "4.0.0";
@@ -10,21 +10,21 @@ fileInfo "product" "Maya 2020";
 fileInfo "version" "2020";
 fileInfo "cutIdentifier" "201911140446-42a737a01c";
 fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 18362)\n";
-fileInfo "UUID" "68624F4A-4EDB-5A17-7BE4-A8AE252660D0";
+fileInfo "UUID" "38C7BC26-4283-5BC3-B801-97A438E7EF8F";
 createNode transform -s -n "persp";
 	rename -uid "A499B1E5-45F0-E902-6D01-CB997AC5473A";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -5.7305813183110406 1.457067250150571 -0.25950718078792967 ;
-	setAttr ".r" -type "double3" -9.3383527334063192 987.3999999998274 0 ;
+	setAttr ".t" -type "double3" 5.4353311436828742 0.31954475954287198 1.5824912961305464 ;
+	setAttr ".r" -type "double3" 9.2616472668274401 1516.5999999997327 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "10A00A63-429A-E74F-09DF-C491C0E99BD6";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 5.7975124067648247;
+	setAttr ".coi" 5.6612462861271702;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -0.015790524736189748 0.51633756474628556 -4.9359906689749877e-08 ;
+	setAttr ".tp" -type "double3" 0 1.2306838642364797 0.28761276800553548 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 	setAttr ".ai_translator" -type "string" "perspective";
 createNode transform -s -n "top";
