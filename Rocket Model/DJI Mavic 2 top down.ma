@@ -1,6 +1,6 @@
 //Maya ASCII 2020 scene
 //Name: DJI Mavic 2 top down.ma
-//Last modified: Sun, Sep 13, 2020 01:18:46 PM
+//Last modified: Sun, Sep 13, 2020 01:20:06 PM
 //Codeset: 1252
 requires maya "2020";
 requires "stereoCamera" "10.0";
@@ -11,7 +11,7 @@ fileInfo "product" "Maya 2020";
 fileInfo "version" "2020";
 fileInfo "cutIdentifier" "201911140446-42a737a01c";
 fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 18362)\n";
-fileInfo "UUID" "01EA2597-4550-4049-AAE4-35B5A5D95F15";
+fileInfo "UUID" "B7BF29F5-4096-681C-A219-FB94CAB07A47";
 createNode transform -s -n "persp";
 	rename -uid "D4E0FDC0-4601-998E-1753-26BE7A3E788C";
 	setAttr ".v" no;
@@ -62,7 +62,7 @@ createNode camera -s -n "frontShape" -p "front";
 	setAttr ".fcp" 3937.0078740157478;
 	setAttr ".fd" 1.9685039370078738;
 	setAttr ".coi" 393.74015748031496;
-	setAttr ".ow" 11.620253518137245;
+	setAttr ".ow" 6.6177756794735165;
 	setAttr ".imn" -type "string" "front";
 	setAttr ".den" -type "string" "front_depth";
 	setAttr ".man" -type "string" "front_mask";
