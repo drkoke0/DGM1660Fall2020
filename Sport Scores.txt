@@ -3,3 +3,4 @@ Zombies 32 - Plants 48
 Banana Peels 46 - Cartoon Guys 2
 Robots 54 - Cyborgs 20 
 Raptors 80 - Princesses 128
+Dragons 24 - Fanboys 2
