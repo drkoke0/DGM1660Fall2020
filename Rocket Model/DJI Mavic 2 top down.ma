@@ -1,6 +1,6 @@
 //Maya ASCII 2020 scene
 //Name: DJI Mavic 2 top down.ma
-//Last modified: Fri, Oct 16, 2020 08:13:09 PM
+//Last modified: Fri, Oct 16, 2020 10:39:50 PM
 //Codeset: 1252
 file -rdi 1 -ns "Mavik_Reference" -rfn "Mavik_ReferenceRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/Users/Cameron Kocherhans/Documents/DGM1660Fall2020/Rocket Model//Mavik Reference.ma";
@@ -19,12 +19,12 @@ fileInfo "product" "Maya 2020";
 fileInfo "version" "2020";
 fileInfo "cutIdentifier" "201911140446-42a737a01c";
 fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 18362)\n";
-fileInfo "UUID" "4ECC5397-42BA-C845-5188-21A66543870D";
+fileInfo "UUID" "35E1236C-48A2-5B50-9004-45B3C647FC53";
 createNode transform -s -n "persp";
 	rename -uid "D4E0FDC0-4601-998E-1753-26BE7A3E788C";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -3.6713699893523799 2.8100804455337092 -1.9533583407384121 ;
-	setAttr ".r" -type "double3" 702.26164728218146 1315.8000000000245 0 ;
+	setAttr ".t" -type "double3" -3.8105793892370929 1.8955255634263348 0.99212380520052945 ;
+	setAttr ".r" -type "double3" 716.06164728218005 1352.5999999998949 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "2120E3AB-46DC-47E1-4E71-27B93B489041";
 	setAttr -k off ".v" no;
@@ -32,7 +32,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr ".ncp" 0.03937007874015748;
 	setAttr ".fcp" 3937.0078740157478;
 	setAttr ".fd" 1.9685039370078738;
-	setAttr ".coi" 4.0495411928803113;
+	setAttr ".coi" 2.1382654756942427;
 	setAttr ".ow" 3.9370078740157477;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
