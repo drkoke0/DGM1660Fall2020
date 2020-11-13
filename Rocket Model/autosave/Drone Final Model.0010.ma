@@ -1,15 +1,11 @@
 //Maya ASCII 2020 scene
-//Name: Drone Final Model.ma
-//Last modified: Thu, Nov 12, 2020 05:36:55 PM
+//Name: Drone Final Model.0010.ma
+//Last modified: Thu, Nov 12, 2020 05:33:32 PM
 //Codeset: 1252
 file -rdi 1 -ns "Mavik_Reference" -rfn "DJI_Mavic_2_top_down:Mavik_ReferenceRN"
 		 -op "v=0;" -typ "mayaAscii" "C:/Users/Cameron Kocherhans/Documents/DGM1660Fall2020/Rocket Model//Mavik Reference.ma";
-file -rdi 1 -ns "Mavic_Pro_2_Top" -rfn "DJI_Mavic_2_top_down:Mavic_Pro_2_TopRN"
-		 -typ "image" "C:/Users/Cameron Kocherhans/Downloads/Mavic Pro 2 Top.png";
 file -r -ns "Mavik_Reference" -dr 1 -rfn "DJI_Mavic_2_top_down:Mavik_ReferenceRN"
 		 -op "v=0;" -typ "mayaAscii" "C:/Users/Cameron Kocherhans/Documents/DGM1660Fall2020/Rocket Model//Mavik Reference.ma";
-file -r -ns "Mavic_Pro_2_Top" -dr 1 -rfn "DJI_Mavic_2_top_down:Mavic_Pro_2_TopRN"
-		 -typ "image" "C:/Users/Cameron Kocherhans/Downloads/Mavic Pro 2 Top.png";
 requires maya "2020";
 requires "stereoCamera" "10.0";
 requires "mtoa" "4.0.4.1";
@@ -17,16 +13,17 @@ requires -nodeType "renderSetup" "renderSetup.py" "1.0";
 requires "stereoCamera" "10.0";
 requires "mtoa" "4.0.4.1";
 currentUnit -l centimeter -a degree -t film;
+fileInfo "exportedFrom" "C:/Users/Cameron Kocherhans/Documents/DGM1660Fall2020/Rocket Model/Drone Final Model.ma";
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2020";
 fileInfo "version" "2020";
 fileInfo "cutIdentifier" "202009141615-87c40af620";
 fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 18363)\n";
-fileInfo "UUID" "7B6FC6D5-4675-41CC-32B9-C89BD38858F0";
+fileInfo "UUID" "8E326247-4042-9331-70D3-508E2F0219DA";
 createNode transform -s -n "persp";
 	rename -uid "BF34214C-44AE-7C1B-0E8E-A9B032522CFB";
-	setAttr ".t" -type "double3" 2.5406500771176392 1.3621800524213068 -3.0640731649356674 ;
-	setAttr ".r" -type "double3" 1788.8616493094385 4129.400000003171 0 ;
+	setAttr ".t" -type "double3" 3.9510151340224984 2.2581365873435901 -3.4672631128112448 ;
+	setAttr ".r" -type "double3" 1772.0616493141831 4088.9999999964498 0 ;
 	setAttr ".rp" -type "double3" 2.2204460492503131e-16 0 0 ;
 	setAttr ".rpt" -type "double3" -6.9321393707724269e-16 7.9092692335430996e-20 -2.0349147539902499e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
@@ -34,7 +31,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v";
 	setAttr ".pze" yes;
 	setAttr ".fl" 30.353495495694741;
-	setAttr ".coi" 0.85497208298636584;
+	setAttr ".coi" 1.9064802085925061;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -6243,7 +6240,7 @@ createNode mesh -n "polySurfaceShape123" -p "polySurface125";
 	setAttr -s 2 ".iog[0].og";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.89529446308089244 0.93764899917693678 ;
+	setAttr ".pv" -type "double2" 0.5022028845269233 0.11786811053752899 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
@@ -6607,7 +6604,7 @@ createNode mesh -n "polySurface127Shape" -p "|polySurface127";
 	setAttr -s 2 ".iog[0].og";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.35025252401828766 0.8009198009967804 ;
+	setAttr ".pv" -type "double2" 0.16605811566114426 0.81361567974090576 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
@@ -6751,7 +6748,7 @@ createNode mesh -n "polySurface133Shape" -p "|polySurface133";
 	setAttr ".dmb" yes;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode fosterParent -n "DJI_Mavic_2_top_down:Mavik_ReferenceRNfosterParent1";
-	rename -uid "FF09B51A-4175-9951-0B58-F2B816F606B8";
+	rename -uid "DC00A47D-4982-B2D9-CB24-95AA9B5769AD";
 createNode transform -n "transform25" -p "DJI_Mavic_2_top_down:Mavik_ReferenceRNfosterParent1";
 	rename -uid "9F575E9F-4426-E268-E5DC-B4BED81DF1C9";
 	setAttr ".v" no;
@@ -7219,7 +7216,7 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n"
 		+ "            -wireframeOnShaded 1\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n"
 		+ "            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n"
-		+ "            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1139\n            -height 1760\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1142\n            -height 1760\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -autoExpandAnimatedShapes 1\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n"
 		+ "            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n"
 		+ "            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -autoExpandAnimatedShapes 1\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n"
@@ -7246,8 +7243,8 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n"
 		+ "                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n"
 		+ "        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1139\\n    -height 1760\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1139\\n    -height 1760\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1142\\n    -height 1760\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1142\\n    -height 1760\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -16687,350 +16684,6 @@ createNode renderLayerManager -n "DJI_Mavic_2_top_down:renderLayerManager";
 createNode renderLayer -n "DJI_Mavic_2_top_down:defaultRenderLayer";
 	rename -uid "90E13F31-4A66-E2EC-541E-9E8EE362013D";
 	setAttr ".g" yes;
-createNode reference -n "DJI_Mavic_2_top_down:Mavik_ReferenceRN";
-	rename -uid "A029877C-4F6F-E009-EFF8-7A860028178C";
-	setAttr -s 61 ".phl";
-	setAttr ".phl[1]" 0;
-	setAttr ".phl[2]" 0;
-	setAttr ".phl[3]" 0;
-	setAttr ".phl[4]" 0;
-	setAttr ".phl[5]" 0;
-	setAttr ".phl[6]" 0;
-	setAttr ".phl[7]" 0;
-	setAttr ".phl[8]" 0;
-	setAttr ".phl[9]" 0;
-	setAttr ".phl[10]" 0;
-	setAttr ".phl[11]" 0;
-	setAttr ".phl[12]" 0;
-	setAttr ".phl[13]" 0;
-	setAttr ".phl[14]" 0;
-	setAttr ".phl[15]" 0;
-	setAttr ".phl[16]" 0;
-	setAttr ".phl[17]" 0;
-	setAttr ".phl[18]" 0;
-	setAttr ".phl[19]" 0;
-	setAttr ".phl[20]" 0;
-	setAttr ".phl[21]" 0;
-	setAttr ".phl[22]" 0;
-	setAttr ".phl[23]" 0;
-	setAttr ".phl[24]" 0;
-	setAttr ".phl[25]" 0;
-	setAttr ".phl[26]" 0;
-	setAttr ".phl[27]" 0;
-	setAttr ".phl[28]" 0;
-	setAttr ".phl[29]" 0;
-	setAttr ".phl[30]" 0;
-	setAttr ".phl[31]" 0;
-	setAttr ".phl[32]" 0;
-	setAttr ".phl[33]" 0;
-	setAttr ".phl[34]" 0;
-	setAttr ".phl[35]" 0;
-	setAttr ".phl[36]" 0;
-	setAttr ".phl[37]" 0;
-	setAttr ".phl[38]" 0;
-	setAttr ".phl[39]" 0;
-	setAttr ".phl[40]" 0;
-	setAttr ".phl[41]" 0;
-	setAttr ".phl[42]" 0;
-	setAttr ".phl[43]" 0;
-	setAttr ".phl[44]" 0;
-	setAttr ".phl[45]" 0;
-	setAttr ".phl[46]" 0;
-	setAttr ".phl[47]" 0;
-	setAttr ".phl[48]" 0;
-	setAttr ".phl[49]" 0;
-	setAttr ".phl[50]" 0;
-	setAttr ".phl[51]" 0;
-	setAttr ".phl[52]" 0;
-	setAttr ".phl[53]" 0;
-	setAttr ".phl[54]" 0;
-	setAttr ".phl[55]" 0;
-	setAttr ".phl[56]" 0;
-	setAttr ".phl[57]" 0;
-	setAttr ".phl[58]" 0;
-	setAttr ".phl[59]" 0;
-	setAttr ".phl[60]" 0;
-	setAttr ".phl[61]" 0;
-	setAttr ".ed" -type "dataReferenceEdits" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN"
-		"Mavik_ReferenceRN" 0
-		"Mavik_ReferenceRN" 144
-		0 "|Mavik_Reference:F_R_Blade_BracketShape1" "|Mavik_ReferenceRNfosterParent1|..:transform25" 
-		"-s -r "
-		0 "|Mavik_ReferenceRNfosterParent1|..:transform25" "|Mavik_Reference:F_R_Arm_Group|Mavik_Reference:F_R_Blade_Bracket1" 
-		"-s -r "
-		2 "|Mavik_Reference:imagePlane1" "visibility" " 0"
-		2 "|Mavik_Reference:imagePlane1" "translate" " -type \"double3\" 0.40379320893239262 -11.11963059577478674 0"
-		
-		2 "|Mavik_Reference:imagePlane1" "displayHandle" " 0"
-		2 "|Mavik_Reference:imagePlane1|Mavik_Reference:imagePlaneShape1" "visibility" 
-		" -k 0 1"
-		2 "|Mavik_Reference:pCube1" "scalePivot" " -type \"double3\" 0 0 0"
-		2 "|Mavik_Reference:pCube1" "scalePivotTranslate" " -type \"double3\" 0 0 0"
-		
-		2 "|Mavik_Reference:pCube1|Mavik_Reference:transform2" "visibility" " 1"
-		2 "|Mavik_Reference:polySurface1" "scalePivot" " -type \"double3\" 0 0 0"
-		
-		2 "|Mavik_Reference:polySurface1" "scalePivotTranslate" " -type \"double3\" 0 0 0"
-		
-		2 "|Mavik_Reference:polySurface1|Mavik_Reference:transform3" "visibility" 
-		" 1"
-		2 "|Mavik_Reference:pCylinder1" "scalePivot" " -type \"double3\" 0 0 0"
-		2 "|Mavik_Reference:pCylinder1" "scalePivotTranslate" " -type \"double3\" 0 0 0"
-		
-		2 "|Mavik_Reference:pCylinder1|Mavik_Reference:transform4" "visibility" " 1"
-		
-		2 "|Mavik_Reference:pCylinder2" "scalePivot" " -type \"double3\" 0 0 0"
-		2 "|Mavik_Reference:pCylinder2" "scalePivotTranslate" " -type \"double3\" 0 0 0"
-		
-		2 "|Mavik_Reference:pCylinder2|Mavik_Reference:transform1" "visibility" " 1"
-		
-		2 "|Mavik_Reference:F_R_Arm_Group" "scalePivot" " -type \"double3\" 0 0 0"
-		
-		2 "|Mavik_Reference:F_R_Arm_Group" "scalePivotTranslate" " -type \"double3\" 0 0 0"
-		
-		2 "|Mavik_Reference:F_R_Arm_Group|Mavik_Reference:F_R_Blade_Bracket1" "visibility" 
-		" 1"
-		2 "|Mavik_Reference:F_R_Arm_Group|Mavik_Reference:F_R_Blade_Bracket1" "translate" 
-		" -type \"double3\" 7.18183311778353151 1.72544037250939564 2.28210197522440428"
-		2 "|Mavik_Reference:F_R_Arm_Group|Mavik_Reference:F_R_Blade_Bracket1" "rotate" 
-		" -type \"double3\" 0 33.90479738917494501 0"
-		2 "|Mavik_Reference:F_R_Arm_Group|Mavik_Reference:F_R_Blade_Bracket1" "scale" 
-		" -type \"double3\" 0.33247557481066115 0.12753640350504097 0.39587703597115836"
-		2 "|Mavik_ReferenceRNfosterParent1|:transform25|Mavik_Reference:F_R_Blade_BracketShape1" 
-		"intermediateObject" " 1"
-		2 "|Mavik_ReferenceRNfosterParent1|:transform25|Mavik_Reference:F_R_Blade_BracketShape1" 
-		"instObjGroups.objectGroups" " -s 2"
-		2 "|Mavik_ReferenceRNfosterParent1|:transform25|Mavik_Reference:F_R_Blade_BracketShape1" 
-		"uvPivot" " -type \"double2\" 0.75 0.125"
-		2 "|Mavik_ReferenceRNfosterParent1|:transform25|Mavik_Reference:F_R_Blade_BracketShape1" 
-		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
-		2 "|Mavik_ReferenceRNfosterParent1|:transform25|Mavik_Reference:F_R_Blade_BracketShape1" 
-		"pnts" " -s 10"
-		2 "|Mavik_ReferenceRNfosterParent1|:transform25|Mavik_Reference:F_R_Blade_BracketShape1" 
-		"pt[8:15]" " -type \"float3\" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
-		2 "|Mavik_ReferenceRNfosterParent1|:transform25|Mavik_Reference:F_R_Blade_BracketShape1" 
-		"pnts[20]" " -type \"float3\" 0 0 0"
-		2 "|Mavik_ReferenceRNfosterParent1|:transform25|Mavik_Reference:F_R_Blade_BracketShape1" 
-		"pnts[28]" " -type \"float3\" 0 0 0"
-		2 "|Mavik_Reference:pCube2" "visibility" " 0"
-		2 "|Mavik_Reference:imagePlane2" "visibility" " 0"
-		2 "|Mavik_Reference:imagePlane2" "translate" " -type \"double3\" 33.4040312990367525 1.77729155891946355 -3.87127271293391573"
-		
-		2 "|Mavik_Reference:imagePlane2" "scale" " -type \"double3\" 1.76653198765717789 1.76653198765717789 1.59968984627123767"
-		
-		2 "|Mavik_Reference:imagePlane2|Mavik_Reference:imagePlaneShape2" "visibility" 
-		" -k 0 1"
-		2 "|Mavik_Reference:imagePlane3" "visibility" " 0"
-		2 "|Mavik_Reference:imagePlane3" "translate" " -type \"double3\" 0.034781559801651193 2.32868850802596405 -28.13205214709851631"
-		
-		2 "|Mavik_Reference:imagePlane3" "scale" " -type \"double3\" 2.95208544347238755 2.95208544347238755 1"
-		
-		2 "|Mavik_Reference:imagePlane3|Mavik_Reference:imagePlaneShape3" "visibility" 
-		" -k 0 1"
-		2 "|Mavik_Reference:pCylinder3" "visibility" " 0"
-		2 "|Mavik_Reference:pCylinder3" "wireColorRGB" " -type \"float3\" 0 0 0"
-		2 "|Mavik_Reference:pCylinder3" "useObjectColor" " 1"
-		2 "|Mavik_Reference:pCylinder3" "objectColor" " 3"
-		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "visibility" 
-		" -k 0 1"
-		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "ghosting" 
-		" 0"
-		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "wireColorRGB" 
-		" -type \"float3\" 0 0 0"
-		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "useObjectColor" 
-		" 1"
-		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "objectColor" 
-		" 3"
-		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "hideOnPlayback" 
-		" 0"
-		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "lodVisibility" 
-		" 1"
-		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "castsShadows" 
-		" 1"
-		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "geometryAntialiasingOverride" 
-		" 0"
-		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "primaryVisibility" 
-		" 1"
-		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "displayImmediate" 
-		" 0"
-		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "displayColors" 
-		" 0"
-		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "displayColorChannel" 
-		" -type \"string\" \"Ambient+Diffuse\""
-		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "ignoreHwShader" 
-		" 0"
-		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "doubleSided" 
-		" 1"
-		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "displayVertices" 
-		" 0"
-		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "displayBorders" 
-		" 0"
-		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "displayEdges" 
-		" 0"
-		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "displayCenter" 
-		" 0"
-		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "displayTriangles" 
-		" 0"
-		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "displayUVs" 
-		" 0"
-		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "displayNonPlanar" 
-		" 0"
-		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "displayNormal" 
-		" 0"
-		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "displayTangent" 
-		" 0"
-		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "materialBlend" 
-		" 0"
-		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "displayInvisibleFaces" 
-		" 0"
-		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "hiddenInOutliner" 
-		" 1"
-		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "useOutlinerColor" 
-		" 0"
-		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "outlinerColor" 
-		" -type \"float3\" 0 0 0"
-		2 "Mavik_Reference:groupParts5" "inputRemoveComponent" " -type \"componentList\" 1 \"f[0:167]\""
-		
-		2 "Mavik_Reference:groupParts5" "groupId" " 36"
-		3 "Mavik_Reference:groupId9.groupId" "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "Mavik_Reference:deleteComponent2.outputGeometry" "|Mavik_ReferenceRNfosterParent1|:transform25|Mavik_Reference:F_R_Blade_BracketShape1.inMesh" 
-		""
-		3 "|Mavik_ReferenceRNfosterParent1|:transform25|Mavik_Reference:F_R_Blade_BracketShape1.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "Mavik_Reference:groupId9.message" ":initialShadingGroup.groupNodes" "-na"
-		
-		3 "Mavik_Reference:groupId9.groupId" "Mavik_Reference:groupParts5.groupId" 
-		""
-		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCube1.translateX" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[1]" ""
-		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCube1.translateY" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[2]" ""
-		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCube1.translateZ" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[3]" ""
-		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCube1.scaleX" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[4]" ""
-		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCube1.scaleY" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[5]" ""
-		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCube1.scaleZ" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[6]" ""
-		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCube1.visibility" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[7]" ""
-		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCube1.rotateX" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[8]" ""
-		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCube1.rotateY" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[9]" ""
-		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCube1.rotateZ" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[10]" ""
-		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:polySurface1.translateX" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[11]" ""
-		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:polySurface1.translateY" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[12]" ""
-		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:polySurface1.translateZ" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[13]" ""
-		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:polySurface1.scaleX" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[14]" ""
-		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:polySurface1.scaleY" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[15]" ""
-		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:polySurface1.scaleZ" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[16]" ""
-		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:polySurface1.visibility" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[17]" ""
-		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:polySurface1.rotateX" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[18]" ""
-		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:polySurface1.rotateY" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[19]" ""
-		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:polySurface1.rotateZ" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[20]" ""
-		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCylinder1.translateX" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[21]" ""
-		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCylinder1.translateY" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[22]" ""
-		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCylinder1.translateZ" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[23]" ""
-		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCylinder1.scaleX" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[24]" ""
-		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCylinder1.scaleY" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[25]" ""
-		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCylinder1.scaleZ" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[26]" ""
-		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCylinder1.visibility" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[27]" ""
-		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCylinder1.rotateX" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[28]" ""
-		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCylinder1.rotateY" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[29]" ""
-		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCylinder1.rotateZ" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[30]" ""
-		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCylinder2.translateX" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[31]" ""
-		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCylinder2.translateY" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[32]" ""
-		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCylinder2.translateZ" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[33]" ""
-		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCylinder2.scaleX" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[34]" ""
-		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCylinder2.scaleY" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[35]" ""
-		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCylinder2.scaleZ" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[36]" ""
-		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCylinder2.visibility" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[37]" ""
-		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCylinder2.rotateX" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[38]" ""
-		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCylinder2.rotateY" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[39]" ""
-		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCylinder2.rotateZ" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[40]" ""
-		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:F_R_Arm_Group.translateX" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[41]" ""
-		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:F_R_Arm_Group.translateY" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[42]" ""
-		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:F_R_Arm_Group.translateZ" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[43]" ""
-		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:F_R_Arm_Group.scaleX" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[44]" ""
-		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:F_R_Arm_Group.scaleY" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[45]" ""
-		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:F_R_Arm_Group.scaleZ" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[46]" ""
-		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:F_R_Arm_Group.visibility" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[47]" ""
-		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:F_R_Arm_Group.rotateX" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[48]" ""
-		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:F_R_Arm_Group.rotateY" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[49]" ""
-		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:F_R_Arm_Group.rotateZ" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[50]" ""
-		5 3 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape.instObjGroups" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[51]" ""
-		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_ReferenceRNfosterParent1|:transform25|Mavik_Reference:F_R_Blade_BracketShape1.inMesh" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[52]" ""
-		5 3 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_ReferenceRNfosterParent1|:transform25|Mavik_Reference:F_R_Blade_BracketShape1.worldMatrix" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[53]" ""
-		5 3 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_ReferenceRNfosterParent1|:transform25|Mavik_Reference:F_R_Blade_BracketShape1.worldMatrix" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[54]" ""
-		5 3 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_ReferenceRNfosterParent1|:transform25|Mavik_Reference:F_R_Blade_BracketShape1.instObjGroups.objectGroups[0]" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[55]" ""
-		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_ReferenceRNfosterParent1|:transform25|Mavik_Reference:F_R_Blade_BracketShape1.instObjGroups.objectGroups[0].objectGroupId" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[56]" ""
-		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_ReferenceRNfosterParent1|:transform25|Mavik_Reference:F_R_Blade_BracketShape1.instObjGroups.objectGroups[0].objectGrpColor" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[57]" ""
-		5 3 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_ReferenceRNfosterParent1|:transform25|Mavik_Reference:F_R_Blade_BracketShape1.outMesh" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[58]" ""
-		5 3 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_ReferenceRNfosterParent1|:transform25|Mavik_Reference:F_R_Blade_BracketShape1.compInstObjGroups.compObjectGroups[0]" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[59]" ""
-		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_ReferenceRNfosterParent1|:transform25|Mavik_Reference:F_R_Blade_BracketShape1.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[60]" ""
-		5 3 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "Mavik_Reference:deleteComponent2.outputGeometry" 
-		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[61]" "DJI_Mavic_2_top_down:Mavik_Reference:F_R_Blade_BracketShape1.i";
-	setAttr ".ptag" -type "string" "";
-lockNode -l 1 ;
 createNode renderSetup -n "DJI_Mavic_2_top_down:renderSetup";
 	rename -uid "52A7FD00-44F3-69C5-6206-B390440812DD";
 createNode shadingEngine -n "DJI_Mavic_2_top_down:standardSurface2SG";
@@ -17050,13 +16703,6 @@ createNode polyCylinder -n "DJI_Mavic_2_top_down:polyCylinder2";
 	setAttr ".h" 0.22567986104545984;
 	setAttr ".sc" 1;
 	setAttr ".cuv" 3;
-createNode reference -n "DJI_Mavic_2_top_down:Mavic_Pro_2_TopRN";
-	rename -uid "F901C65C-4299-A9B6-AD1E-47B47C4F68F8";
-	setAttr ".ed" -type "dataReferenceEdits" 
-		"DJI_Mavic_2_top_down:Mavic_Pro_2_TopRN"
-		"Mavic_Pro_2_TopRN" 0;
-	setAttr ".ptag" -type "string" "";
-lockNode -l 1 ;
 createNode polyCube -n "DJI_Mavic_2_top_down:polyCube4";
 	rename -uid "C0FB4BD0-4DB9-17FB-773A-E0A66704C013";
 	setAttr ".w" 1.2103857172369739;
@@ -58583,243 +58229,469 @@ createNode polyTweakUV -n "polyTweakUV349";
 	rename -uid "0199A617-4D6D-2FED-F755-1AAAE200DB86";
 	setAttr ".uopa" yes;
 	setAttr -s 448 ".uvtk";
-	setAttr ".uvtk[0:249]" -type "float2" 0.33649057 0.44484794 0.074552543 0.76493305
-		 0.063681871 0.71950287 -0.061108306 0.59882438 0.15977237 0.76037681 0.012638072
-		 0.81890309 0.2315968 0.82614189 0.063595079 0.75913674 0.091153719 0.7588324 0.090615764
-		 0.73991966 -0.090273634 0.79212636 -0.060690291 0.75923574 -0.089303896 0.62371027
-		 0.033277642 0.73017097 0.027453776 0.73952812 -0.094597138 0.63269395 -0.095785797
-		 0.79334491 -0.06832242 0.75925809 -0.073502965 0.64815527 0.049193062 0.7563625 0.049445085
-		 0.72239244 -0.074140921 0.61598462 -0.083068989 0.74300796 -0.11465338 0.80054283
-		 -0.099408202 0.75934952 -0.083380334 0.75930244 -0.083237402 0.64463884 0.039058175
-		 0.75241673 0.039364096 0.7263543 -0.083618149 0.61996174 -0.12047823 0.80559796 -0.12473691
-		 0.81801504 -0.08907979 0.64115417 0.033014324 0.7485972 0.075554915 0.85861194 -0.067302227
-		 0.84493595 -0.069666341 0.77721053 -0.10500116 0.83522123 -0.089293122 0.84054297
-		 -0.11459951 0.83010286 0.21688876 0.44764858 0.0088662338 0.79688764 -0.6370762 0.65837932
-		 -0.63728905 0.70485574 -0.63278788 0.69728172 -0.52920103 0.61924541 -0.64343202
-		 0.66459 -0.64362544 0.71549755 -0.66467947 0.68608898 -0.66476732 0.75164628 -0.64976871
-		 0.72584343 -0.64960051 0.6706745 0.35055473 0.82707745 -0.062413774 0.76167601 -0.71125966
-		 0.77188814 -0.62991798 0.80692363 -0.71600997 0.84738767 -0.63815475 0.76631284 -0.69083601
-		 0.71628451 -0.6002996 0.72309947 -0.68507624 0.7882219 -0.68511224 0.70841277 -0.6792081
-		 0.77701968 -0.67919636 0.70144135 -0.07379964 0.66340506 -0.086436525 0.67726517
-		 -0.10484935 0.78645229 -0.097430483 0.69953781 -0.092121035 0.68363923 -0.083610311
-		 0.83780897 -0.076441884 0.72909009 -0.086139627 0.72201025 -0.091955528 0.71527416
-		 -0.12230571 0.58977801 -0.10108256 0.58192843 0.16494384 0.43382764 -0.11754785 0.61694038
-		 -0.13744992 0.60046673 -0.12476542 0.62131202 -0.13987458 0.63981014 -0.15567297
-		 0.63592219 -0.14666523 0.61073124 -0.14908004 0.65791738 -0.15812412 0.70308834 0.17771432
-		 0.85874301 -0.12254826 0.68187684 -0.12028135 0.79472578 -0.1032126 0.81852591 -0.13812995
-		 0.67099428 -0.14076908 0.76728928 -0.12529352 0.78762579 -0.14736378 0.66041249 -0.1499287
-		 0.7478711 -0.16714865 0.58264488 -0.16695367 0.57395321 0.078700066 0.43413818 -0.16927533
-		 0.59663522 -0.16742793 0.59494978 -0.16938354 0.60449934 -0.16969961 0.62724495 -0.16840965
-		 0.63700563 -0.16770409 0.60696316 -0.17001113 0.64932781 -0.17080475 0.7040332 0.082884848
-		 0.90119642 -0.16924733 0.6977098 -0.17172372 0.81840783 -0.1710133 0.88705271 -0.16929194
-		 0.68154103 -0.17180012 0.78240836 -0.17178819 0.80896044 -0.16911447 0.6672554 -0.1715917
-		 0.75813621 -0.61670995 0.65108472 -0.61553049 0.64593732 -0.50565338 0.6102519 -0.61595368
-		 0.68515474 -0.6183697 0.658337 -0.61700666 0.69335872 -0.61867201 0.70631677 -0.62368762
-		 0.68410379 -0.61999559 0.66543037 -0.62029654 0.71890563 -0.62392819 0.75094062 -0.52345335
-		 0.79444826 -0.62674963 0.72250253 -0.62702549 0.82283396 -0.6280129 0.8568542 -0.62643784
-		 0.71324342 -0.62657934 0.79844224 -0.62687874 0.81338722 -0.62594569 0.70433789 -0.62610912
-		 0.78406787 0.15892863 0.71983999 0.085855484 0.72240496 0.079187021 0.72636223 0.075178608
-		 0.7301743 0.071398087 0.73951429 0.07518141 0.74856657 0.07923694 0.75238103 0.086017519
-		 0.75632536 -0.8339026 0.91291565 -0.83489692 0.90888417 -0.74033648 0.83075887 -0.62115097
-		 0.57092959 -0.90418446 0.85456812 -0.68496114 0.8261748 -0.54831213 0.78476626 -0.74735123
-		 0.83705652 -0.74553579 0.82293272 -0.90488523 0.90195185 -0.74600416 0.88718218 -0.64410609
-		 0.82273209 -0.58926946 0.54253191 -0.70748413 0.81890589 -0.70215487 0.80847889 -0.58372045
-		 0.53234363 -0.73677152 0.88533628 -0.63904613 0.82272458 -0.60839134 0.51339841 -0.72761673
-		 0.78994876 -0.72460431 0.82767063 -0.60643369 0.55080533 -0.62762254 0.85499984 -0.70496011
-		 0.87652737 -0.61847419 0.82269335 -0.62907392 0.8227095 -0.59725308 0.51796252 -0.71623182
-		 0.7942825 -0.71380061 0.82319623 -0.59563071 0.54662883 -0.69467491 0.87089878 -0.68410116
-		 0.85716707 -0.59046817 0.52227932 -0.70925415 0.79847544 -0.74620885 0.78604186 -0.72332901
-		 0.82929671 -0.63981867 0.78801101 -0.6960817 0.83842093 -0.70731705 0.83270496 -0.68944544
-		 0.84395802 -0.56409723 0.62136346 -0.70528895 0.57998455 -0.0027038455 0.53299159
-		 -0.0049118623 0.62890381 -0.0068463497 0.63671845 0.26261303 0.6682657 0.00039281324
-		 0.52660102 -0.0022191107 0.61798668 0.010195103 0.50560373 0.0062790848 0.58201236
-		 0.00034205616 0.60746378 0.0033371635 0.52043134 -0.8324917 0.83531666 -0.62582839
-		 0.5634796 0.014033677 0.45433205 0.29407838 0.57927394 0.023985047 0.5069598 0.3193779
-		 0.58770096 0.020412829 0.48137707 0.29708564 0.61111945 0.013521774 0.54815376 0.018687513
-		 0.48636806 0.011640739 0.55795079 0.016451016 0.49181539 -0.60734761 0.66868407 -0.59359699
-		 0.65352589 -0.72042459 0.87277311 -0.58257723 0.62944275 -0.58749968 0.64660603 -0.70916802
-		 0.81652391 -0.60830027 0.59777802 -0.59692657 0.60535377 -0.58990562 0.61256015 -0.54816937
-		 0.58373642 -0.57271129 0.59244049 -0.50071073 0.65985429 -0.55273569 0.72246897 -0.53148472
-		 0.57133269 -0.54462439 0.71752775 -0.52874517 0.69682336 -0.51469868 0.5302527 -0.52195638
-		 0.55937195 -0.51996583 0.67681557 -0.5144769 0.62787938 -0.49029011 0.72732645 -0.55603707
-		 0.47834224 -0.56479931 0.53281802 -0.5850029 0.50829464 -0.5380373 0.49048334 -0.54011589
-		 0.56063372 -0.55877703 0.54001856 -0.52678168 0.50225425 -0.5281961 0.58056051 -0.49435121
-		 0.5953775 -0.49330437 0.60653138 -0.3961322 0.6898455 -0.48960289 0.74536294 -0.49580342
-		 0.57991278 -0.49041742 0.73642772 -0.49275142 0.71082515 -0.50051093 0.52976835 -0.49718729
-		 0.56517076 -0.49498624 0.68630302 -0.50039351 0.62693805 -0.40394303 0.68040669 -0.50758815
-		 0.47114158 -0.51235038 0.51803601 -0.52093655 0.46853089 -0.50538808 0.48307747;
-	setAttr ".uvtk[250:447]" -0.50812364 0.54734367 -0.51118779 0.52522492 -0.50370884
-		 0.49636555 -0.50560689 0.57035285 -0.019850735 0.53986961 -0.018255197 0.54552966
-		 0.2379538 0.68164724 -0.019840665 0.64926016 -0.022075988 0.5319854 -0.021558762
-		 0.64070332 -0.024255186 0.62727022 -0.030137204 0.50603318 -0.024224088 0.52436203
-		 -0.026850976 0.61430472 -0.033786379 0.58297145 0.20495245 0.60648686 -0.044819247
-		 0.47992581 -0.052804679 0.52643573 -0.061902262 0.50146908 -0.041044731 0.4851225
-		 -0.0459814 0.54398805 -0.050153702 0.53315187 -0.037513044 0.49062818 -0.042072363
-		 0.5549044 -0.8456735 0.83286768 -0.76542181 0.82745677 -0.75820833 0.82295042 -0.75399727
-		 0.81863624 -0.75047666 0.80816907 -0.75528413 0.79815358 -0.75998151 0.79396528 -0.76763213
-		 0.78964776 -0.84685946 0.78740901 -0.70399004 0.57651007 -0.56241161 0.61794752 0.24397811
-		 0.67615581 -0.39271185 0.68458891 -0.4977493 0.65452981 0.31376761 0.59504265 0.014906628
-		 0.53856272 -0.019627064 0.65032482 0.25652447 0.67378968 -0.48874074 0.75481784 -0.56853968
-		 0.73207891 0.2902211 0.62277931 0.28016534 0.63817161 0.29396796 0.61671114 0.26474521
-		 0.66152567 0.26932871 0.65465218 0.25995553 0.66866988 -0.90586054 0.89280546 -0.7462585
-		 0.89846677 0.35188136 0.82430488 0.07763689 0.85044998 -0.092036836 0.82647765 -0.6278708
-		 0.74909151 -0.16834606 0.74545801 -0.10029752 0.69833851 0.23061568 0.82887924 -0.52119386
-		 0.79612231 0.082055867 0.90277666 0.17640987 0.86287695 -0.63275671 0.80537868 -0.71097791
-		 0.88898969 -0.63534331 0.76856887 -0.69073296 0.80054766 -0.61582285 0.68413728 -0.52730131
-		 0.62437207 -0.16916244 0.58835387 -0.1036121 0.60848504 -0.58516586 0.7005837 -0.56701946
-		 0.6762808 -0.5927155 0.71131778 -0.54073042 0.64174789 -0.54833651 0.65162122 -0.53288203
-		 0.63159508 -0.71632659 0.746562 -0.60276282 0.71926773 -0.58746362 0.69609857 -0.56918764
-		 0.671556 -0.59508431 0.70706272 -0.54270828 0.63667369 -0.55036491 0.64661741 -0.53481382
-		 0.62648809 -0.50744164 0.60509276 -0.63256192 0.653974 0.079648882 0.42879331 0.16627833
-		 0.42853922 0.075941585 0.76632595 0.21787444 0.44437283 0.33516973 0.44807333 -0.092889503
-		 0.76124924 -0.90753502 0.85618365 -0.68625849 0.82944196 -0.75295144 0.81705737 -0.05528437
-		 0.46492511 -0.51481575 0.44446278 -0.58124709 0.45964324 -0.54997253 0.7880674 0.19988328
-		 0.61411828 0.0060877576 0.47814655 -0.40690869 0.68816489 -0.49315175 0.73278785
-		 0.29943633 0.5716542 0.030744717 0.46730202 0.30303121 0.60466605 0.29628694 0.61675489
-		 0.28624943 0.63232011 0.29999632 0.61053067 0.27084911 0.6559515 0.2754333 0.64901876
-		 0.26605079 0.66312665 -0.004927475 0.53756958 -0.71966177 0.89519095 -0.68218356
-		 0.86581159 -0.69432926 0.85247558 -0.69225252 0.88531327 -0.68602014 0.87965417 -0.70526826
-		 0.84688634 -0.70330113 0.89117551 -0.72287452 0.84111953 -0.74356234 0.78687817 -0.12523203
-		 0.77618831 -0.12096769 0.78843385 -0.10504618 0.75863916 -0.11472943 0.76369071 -0.11499444
-		 0.79363501 -0.089330733 0.75344574 -0.10461487 0.79905641 -0.067385063 0.7497673
-		 -0.089593962 0.80296451 0.014929186 0.81660604 -0.059375107 0.66570544 -0.12055194
-		 0.79263145 -0.12476989 0.78051001 -0.10468525 0.76301336 -0.11431737 0.76806682 -0.11463009
-		 0.79775673 -0.089053072 0.75779372 -0.10433733 0.80307519 -0.064746723 0.73228818
-		 -0.62474036 0.49307394 -0.69627702 0.85713357 -0.68419397 0.87038684 -0.69417274
-		 0.88979882 -0.68799078 0.88416171 -0.7071569 0.85158491 -0.70513332 0.89564425 -0.72466779
-		 0.84586614 -0.71738148 0.92088014 -0.60617065 0.82267433 -0.63681024 0.85832185 -0.72196168
-		 0.88237548 -0.61729985 0.84748882 -0.61126429 0.8402707 -0.64254206 0.86039257 -0.7448433
-		 0.86063278 -0.71718645 0.83060426 -0.6304853 0.79124528 -0.61961263 0.79861099 -0.61294919
-		 0.80572969 -0.64562732 0.78599745 -0.83478898 0.84464806 0.091690287 0.77769136 -0.075742699
-		 0.8432498 -0.083687596 0.77556294 -0.099698238 0.77177018 -0.060932733 0.7782371
-		 -0.069121338 0.74133128 -0.10465359 0.79530579 -0.099113874 0.74679273 -0.060445897
-		 0.74028963 0.0097670099 0.80531341 -0.10924981 0.76810241 -0.1180433 0.75940436 -0.10879195
-		 0.75044352 -0.064754084 0.85562426 -0.10199446 0.78067613 -0.07696899 0.67076796
-		 -0.073136166 0.73678023 -0.089494228 0.83187586 -0.11491615 0.82138926 -0.12509216
-		 0.80924994 -0.10527481 0.82652992 -0.11492173 0.79170847 -0.12079052 0.79678303 -0.063909166
-		 0.64033502 -0.61760867 0.69426447 -0.72668445 0.87929606 -0.60411793 0.66060305 -0.61247432
-		 0.58963072 -0.70581239 0.82289749 -0.68780893 0.83420026 -0.68241137 0.84746486 -0.69449574
-		 0.82863933 -0.72009152 0.79453057 -0.7033478 0.86690283 -0.69301927 0.86125213;
-createNode polyTweakUV -n "polyTweakUV350";
-	rename -uid "8FD35711-4FD1-DBD6-7727-DEABE16BE5D6";
-	setAttr ".uopa" yes;
-	setAttr -s 197 ".uvtk[0:196]" -type "float2" 0.83329576 0.83297378 0.83337319
-		 0.8028236 0.85608816 0.73849094 0.85648388 0.77144778 0.52660811 0.86296207 0.72572678
-		 0.86867589 0.5271579 0.66499019 0.72250742 0.66877383 0.71830916 0.63512564 0.52426779
-		 0.63503867 0.65378582 0.72076374 0.67267942 0.71385133 0.67448264 0.73866749 0.64624536
-		 0.73810375 0.53093767 0.84471953 0.72759396 0.84337479 0.82967055 0.70919484 0.82679391
-		 0.67476088 0.64753491 0.7150529 0.63755459 0.73796928 0.52760136 0.73858219 0.64847195
-		 0.76129276 0.67393512 0.77130663 0.6989705 0.76210231 0.70886612 0.73912328 0.69788504
-		 0.71587431 0.67250502 0.70592248 0.44586179 0.73860317 0.43645817 0.76073927 0.43528146
-		 0.71653908 0.67376113 0.76330709 0.65450841 0.7557385 0.70018458 0.73897636 0.69269204
-		 0.75635195 0.69188422 0.72138369 0.43182087 0.75746226 0.43810636 0.73939657 0.43087149
-		 0.7213788 0.41479522 0.71637058 0.41469914 0.70882571 0.42896625 0.75491065 0.43436718
-		 0.73939925 0.42815569 0.72392297 0.41488117 0.7197873 0.42906883 0.75385374 0.4344703
-		 0.73833913 0.4282572 0.72285962 0.41497993 0.71872348 0.6510722 0.71925002 0.64252454
-		 0.73889542 0.67247695 0.71141952 0.65188384 0.75888097 0.67370284 0.76745999 0.69515461
-		 0.75957495 0.7036413 0.7398842 0.69423389 0.71995318 0.65365946 0.72161639 0.64612007
-		 0.73895323 0.67254931 0.71470451 0.65438151 0.75658584 0.67363 0.76415336 0.6925571
-		 0.75719875 0.70004845 0.73982584 0.69174969 0.72223592 0.41437519 0.66233128 0.41284734
-		 0.63498795 0.41241151 0.86037689 0.41571647 0.84219718 0.41619664 0.76852977 0.41547185
-		 0.73834562 0.41596496 0.75802499 0.41595256 0.7625165 0.41586614 0.75908184 -0.0087795109
-		 0.81479311 -0.032538489 0.75154543 -0.027966037 0.73873878 -0.0017176121 0.8034398
-		 0.29810783 0.85793757 0.099104241 0.85527039 0.30132183 0.65973133 0.30155644 0.63040686
-		 0.106057 0.63484752 0.10352518 0.65450752 0.17540279 0.72083825 0.18386784 0.73823166
-		 0.155461 0.73881388 0.15602754 0.71390527 0.30500135 0.84380734 0.1072035 0.84400988
-		 -0.0015399307 0.67461777 -0.0055427402 0.69014478 0.30311182 0.73864424 0.19260618
-		 0.73809183 0.18140748 0.7151053 0.18279478 0.76149797 0.15765946 0.77157176 0.13196684
-		 0.7623561 0.12083019 0.73928964 0.13072802 0.71594179 0.15580176 0.7059474 0.38501665
-		 0.73861992 0.39553863 0.76075757 0.39449805 0.71654445 0.15743212 0.76354253 0.17643914
-		 0.75593072 0.12957765 0.73913842 0.13800712 0.75657773 0.13705607 0.72147173 0.39263222
-		 0.73940951 0.39982709 0.75747585 0.39896789 0.72138369 0.39637518 0.73941058 0.40255591
-		 0.75492144 0.40181175 0.72392726 0.39646858 0.73834944 0.40265146 0.75386405 0.4019067
-		 0.72286397 0.18745098 0.73902392 0.17785677 0.71931809 0.15590762 0.71146488 0.17903677
-		 0.75908136 0.15749745 0.76771057 0.13548405 0.75981581 0.12593628 0.74005163 0.13441373
-		 0.72003579 0.18383488 0.73908442 0.1753715 0.72169369 0.15599994 0.71476173 0.17640725
-		 0.7567808 0.15740453 0.76439154 0.13798334 0.75742829 0.1295556 0.73999107 0.13703282
-		 0.72232711 0.41808134 0.84369123 0.53098148 0.84357566 0.86627603 0.74669105 0.8370623
-		 0.68132508 0.73235059 0.84980929 0.84190184 0.81167191 0.7268374 0.63952804 0.30033562
-		 0.83981597 -0.03798081 0.72831172 -0.0097901672 0.66340464 0.098867431 0.83697015
-		 -0.011889204 0.794586 0.1016288 0.62570697 0.30125085 0.63493711 0.41549319 0.63296062
-		 0.5292325 0.63558453 0.67376113 0.76330709 0.69269204 0.75635195 0.70018458 0.73897636
-		 0.69188422 0.72138369 0.67267942 0.71385133 0.65378582 0.72076374 0.64624536 0.73810375
-		 0.65450841 0.7557385 0.41497993 0.71872348 0.4282572 0.72285962 0.4344703 0.73833913
-		 0.42906883 0.75385374 0.41596496 0.75802499 0.40265146 0.75386405 0.39646858 0.73834944
-		 0.4019067 0.72286397 0.15602754 0.71390527 0.15743212 0.76354253 0.17643914 0.75593072
-		 0.18386784 0.73823166 0.17540279 0.72083825 0.13705607 0.72147173 0.12957765 0.73913842
-		 0.13800712 0.75657773 0.15580176 0.7059474 0.18140748 0.7151053 0.13072802 0.71594179
-		 0.12083019 0.73928964 0.13196684 0.7623561 0.15765946 0.77157176 0.18279478 0.76149797
-		 0.19260618 0.73809183 0.41619664 0.76852977 0.39553863 0.76075757 0.39449805 0.71654445
-		 0.41469914 0.70882571 0.38501665 0.73861992 0.43645817 0.76073927 0.43528146 0.71653908
-		 0.44586179 0.73860317 0.67250502 0.70592248 0.64753491 0.7150529 0.69788504 0.71587431
-		 0.70886612 0.73912328 0.6989705 0.76210231 0.67393512 0.77130663 0.64847195 0.76129276
-		 0.63755459 0.73796928;
-createNode polyMapCut -n "polyMapCut716";
-	rename -uid "EB7F3A5C-4EB3-5679-9335-9EA79430F497";
-	setAttr ".uopa" yes;
-	setAttr ".ics" -type "componentList" 1 "e[116]";
-	setAttr ".uic" yes;
-createNode polyTweakUV -n "polyTweakUV351";
-	rename -uid "DBB518F4-4B8C-A821-99BC-A7AF25B5B0A2";
-	setAttr ".uopa" yes;
-	setAttr -s 199 ".uvtk[0:198]" -type "float2" 0.11270755 0.049031138 0.075378478
-		 0.11547811 0.087166369 0.1106071 0.114874 0.046703279 0.079971172 0.02978915 0.10155677
-		 0.045890987 0.069547556 0.080495238 0.093206681 0.054702163 0.084203124 0.081034847
-		 0.059649177 0.056804232 0.034693304 0.08629109 0.038145665 0.087625757 0.01560274
-		 0.090425417 0.031382509 0.087659732 0.083718039 0.024806798 0.056421287 0.10727543
-		 0.1084991 0.045779109 0.092363119 0.099342041 0.034801129 0.084610596 0.030231489
-		 0.086343601 0.0455916 0.069848411 0.028425707 0.090726152 0.030425562 0.095214739
-		 0.035083715 0.097177878 0.039642226 0.095436528 0.041439656 0.091063872 0.039450716
-		 0.08658345 0.0054022809 0.060930319 0.030985899 0.061289962 0.0069835922 0.056493111
-		 0.031730715 0.094163015 0.030153705 0.090917364 0.038492445 0.094118848 0.035187963
-		 0.095492259 0.039716374 0.0908667 0.00089927111 0.061804064 0.0043070465 0.060091801
-		 0.0057943007 0.056623526 0.0042452365 0.053883024 0.0051643401 0.052815504 0.00083734188
-		 0.061113067 0.0037794858 0.059653647 0.0050693303 0.056659289 0.0038067847 0.054370232
-		 0.0010083476 0.060775645 -0.015992487 0.058771562 -0.014669025 0.055974022 -0.015870417
-		 0.05378766 0.034795467 0.085630015 0.030889345 0.087120786 0.038777065 0.087306336
-		 0.029348208 0.090872064 0.03106506 0.09470816 0.035052899 0.096377388 0.038950812
-		 0.094880596 0.04048581 0.091136351 0.034826282 0.086249307 0.031365052 0.087556556
-		 0.038343195 0.087738827 0.029987646 0.090875283 0.031498861 0.094272986 0.035020594
-		 0.095756963 0.038475636 0.094444767 0.03984816 0.091131642 0.062641643 -0.13036394
-		 0.045548983 0.042920649 0.06743326 0.019874573 0.071571372 0.014811695 0.027344175
-		 0.059745967 -0.01853689 0.056422427 -0.0013890695 0.059877701 -0.002106769 0.060539968
-		 -0.0016702246 0.060043581 0.017419003 -0.027715802 0.011866475 -0.046038926 -0.024740148
-		 0.0013447967 -0.030345667 0.012736734 0.054802261 0.0098155737 0.031774007 -0.009331286
-		 0.049742959 -0.11515373 0.056272887 -0.10994661 0.0067207981 0.0048061581 0.027238928
-		 -0.08792299 -0.02826827 0.023196299 -0.029528078 0.026303012 -0.052915409 0.022392286
-		 -0.029742237 0.02007528 0.0029180781 0.055359416 -0.022128515 0.031166494 -0.012474939
-		 -0.0034989112 0.014845692 -0.065559626 0.017174911 0.042102993 -0.028433792 0.027589221
-		 -0.02658492 0.023414988 -0.032930437 0.029210823 -0.037447814 0.027276833 -0.039312366
-		 0.022949297 -0.037455145 0.018764514 -0.032947365 0.017150659 -0.028438084 0.019095141
-		 -0.0032870639 0.053256936 -0.0048756469 0.057735994 0.031812198 0.050670326 -0.036144022
-		 0.026287276 -0.032787506 0.027591605 -0.03635985 0.020049293 -0.037624542 0.023161966
-		 -0.033093873 0.018765051 -0.0021930169 0.054303534 -0.0036900509 0.05779589 0.0012483159
-		 0.052578218 -0.0016585421 0.054742284 -0.0029575098 0.057751551 0.0013110796 0.053270228
-		 -0.021081829 0.054072928 -0.022409348 0.056874048 0.0011650482 0.053337403 -0.029083185
-		 0.027052779 -0.027504256 0.023478407 -0.029097073 0.019786019 -0.032928232 0.028447349
-		 -0.036796335 0.026802976 -0.038397435 0.023105163 -0.036812548 0.019523162 -0.032959048
-		 0.018134076 -0.029539999 0.02663048 -0.02812814 0.023468215 -0.029530223 0.020196635
-		 -0.032947842 0.027851719 -0.036363188 0.026389617 -0.037771825 0.023113806 -0.036355201
-		 0.019945581 -0.032940749 0.018728632 0.017235886 0.069220833 0.031530209 0.083082505
-		 0.11494737 0.04785639 0.11079293 0.049781978 0.10411154 0.041564524 0.11385965 0.04698956
-		 0.097951986 0.059902728 0.05938103 0.004676342 0.022238217 -0.046556056 0.024171554
-		 -0.062827468 0.037701927 -0.014323652 0.025605224 -0.03098768 0.034814201 -0.083273351
-		 0.031425662 0.029037293 0.062840901 0.10103714 0.075474359 0.085822642 0.012086781
-		 0.093515739 0.015583726 0.094959423 0.018999012 0.093647525 0.02033654 0.090351924
-		 0.018816264 0.086999506 0.015324207 0.085550398 0.011902661 0.086857527 0.010560186
-		 0.090158626 0.0035506636 0.054254539 0.0048892647 0.056344517 0.0037723333 0.059250541
-		 -0.018871391 0.060136747 -0.021204555 0.059064697 -0.0027530063 0.057777949 -0.0016184282
-		 0.054866143 -0.018198097 0.052712515 -0.04936792 0.019148426 -0.056087688 0.025925415
-		 -0.052489653 0.027259247 -0.049035385 0.025825815 -0.047743753 0.022467984 -0.052961066
-		 0.017808633 -0.05642195 0.019237833 -0.057718471 0.022601558 0.0030751959 0.019853469
-		 0.0050419113 0.02415698 -0.0014893867 0.018009778 -0.0059835762 0.019713338 -0.0077673048
-		 0.02397155 -0.0057892054 0.028282698 -0.0012165762 0.030115962 0.0032665865 0.028404769
-		 -0.0030045975 0.061426707 0.025805898 0.056240611 0.0011759559 0.051339395 0.035443969
-		 0.052222311 0.027543314 0.052215457 0.00099231396 0.062835164 0.036974497 0.055718593
-		 0.035245247 0.059735596 0.068476379 0.08386261 0.064042568 0.081863292 0.070299566
-		 0.088219456 0.068451881 0.092387609 0.064009845 0.093932323 0.059567519 0.09194278
-		 0.057733364 0.087577812 0.059589453 0.08339972 0.068908058 -0.12509096 0.056574427
-		 0.095764279;
+	setAttr ".uvtk[0:249]" -type "float2" 0.39343295 0.39270067 0.074552543 0.76493305
+		 -0.01051468 0.70681536 -0.064546019 0.5463627 0.085575819 0.74768931 0.012638072
+		 0.81890309 0.28853917 0.77399468 -0.010601472 0.74644923 0.028385025 0.75585312 0.023731953
+		 0.72358531 -0.090273634 0.79212636 -0.068109795 0.73928952 -0.093311042 0.57061028
+		 -0.040918898 0.71748346 -0.046742763 0.72684067 -0.098815113 0.57946914 -0.095785797
+		 0.79334491 -0.072968647 0.73845738 -0.078133531 0.59534311 -0.025003485 0.74367499
+		 -0.024751462 0.70970494 -0.077985004 0.56321543 -0.085804552 0.70897329 -0.11465338
+		 0.80054283 -0.0927663 0.73507088 -0.082557067 0.73681647 -0.087765947 0.59163094
+		 -0.035138372 0.73972923 -0.034832451 0.7136668 -0.087543227 0.56698692 -0.12047823
+		 0.80559796 -0.12473691 0.81801504 -0.093513645 0.58803076 -0.041182224 0.7359097
+		 0.075554915 0.85861194 -0.067302227 0.84493595 -0.07006377 0.76881415 -0.10500116
+		 0.83522123 -0.089293122 0.84054297 -0.11459951 0.83010286 0.27383113 0.39550132 0.0088662338
+		 0.79688764 -0.6409151 0.59419322 -0.67846644 0.58822232 -0.67472059 0.58204395 -0.47225866
+		 0.5670982 -0.64740729 0.60029936 -0.68374646 0.5969097 -0.66911376 0.62144899 -0.70136172
+		 0.62652701 -0.68886739 0.60536736 -0.65370822 0.60628295 0.40749711 0.77493024 -0.027472891
+		 0.7760368 -0.71736246 0.70638156 -0.57297564 0.75477642 -0.74427003 0.70501715 -0.5812124
+		 0.71416563 -0.69587123 0.65119427 -0.54335725 0.67095226 -0.71823657 0.65666729 -0.68999755
+		 0.64342767 -0.71340996 0.64738268 -0.68394476 0.63655853 -0.055328548 0.68305928
+		 -0.067328885 0.69266778 -0.10484935 0.78645229 -0.076182209 0.71043801 -0.072704725
+		 0.69712889 -0.083610311 0.83780897 -0.048141912 0.74269277 -0.060077399 0.73383576
+		 -0.067621499 0.72623336 -0.12542157 0.5360359 -0.10403679 0.52864778 0.22188622 0.38168043
+		 -0.11187678 0.62969595 -0.14080925 0.54639149 -0.1192736 0.63192135 -0.13326395 0.64519596
+		 -0.15987998 0.58142859 -0.15026575 0.55645102 -0.14070144 0.65960515 -0.14370224
+		 0.69904983 0.23465672 0.8065958 -0.12790585 0.62801319 -0.087295622 0.79272354 -0.064620815
+		 0.81876612 -0.14320898 0.61682475 -0.114345 0.76248348 -0.093968749 0.78496838 -0.15217778
+		 0.60606527 -0.12755838 0.74235672 -0.16999775 0.52796388 -0.16957831 0.5192849 0.13564244
+		 0.38199097 -0.17315188 0.59820867 -0.17059146 0.54025114 -0.17200214 0.60542262 -0.16869567
+		 0.62629694 -0.17261939 0.58224839 -0.17117089 0.55224741 -0.16551292 0.64657533 -0.15774445
+		 0.69686419 0.13982722 0.84904921 -0.1748369 0.64287531 -0.14166506 0.8024587 -0.13139801
+		 0.86606473 -0.17454307 0.62672567 -0.14684573 0.76910317 -0.14305499 0.79370141 -0.17404792
+		 0.61245775 -0.15021604 0.74667811 -0.62041235 0.58727771 -0.61911005 0.58213741 -0.44871101
+		 0.55810469 -0.6579951 0.57437313 -0.622244 0.59452003 -0.65779078 0.58192515 -0.6574766
+		 0.59385622 -0.62815106 0.62025225 -0.62403709 0.60160369 -0.65718454 0.60544997 -0.65605557
+		 0.63500834 -0.46651098 0.74230105 -0.63199812 0.65860587 -0.64908344 0.70168054 -0.64536291
+		 0.73327088 -0.6315015 0.64935708 -0.65201449 0.67903221 -0.65024358 0.69290811 -0.63083011
+		 0.64046168 -0.65354347 0.66569293 0.084732093 0.70715243 0.011658933 0.70971745 0.0049904622
+		 0.71367472 0.00098206475 0.7174868 -0.0027984567 0.72682679 0.00098485872 0.73587906
+		 0.0050403886 0.73969352 0.011820976 0.74363786 -0.71279716 0.83319181 -0.71157372
+		 0.82972407 -0.63953149 0.81576866 -0.62115097 0.51218903 -0.76728112 0.81411487 -0.65525436
+		 0.80125082 -0.51784134 0.75459903 -0.62267566 0.78695387 -0.77836847 0.75324911 -0.71508634
+		 0.89968705 -0.60632277 0.90359682 -0.64543003 0.78657681 -0.58926946 0.48379135 -0.60667914
+		 0.80391568 -0.60134989 0.79348874 -0.58372045 0.47360307 -0.6002214 0.90153837 -0.63878804
+		 0.78824776 -0.60839134 0.45465782 -0.62681174 0.77495855 -0.62379932 0.81268048 -0.60643369
+		 0.49206474 -0.61725557 0.81724554 -0.57947958 0.89104211 -0.61177748 0.79504824 -0.62569618
+		 0.79154277 -0.59725308 0.45922199 -0.61542684 0.77929235 -0.61299562 0.80820602 -0.59563071
+		 0.48788828 -0.57328618 0.88450187 -0.56941563 0.86927664 -0.59046817 0.4635388 -0.60844916
+		 0.78348529 -0.78712398 0.72397614 -0.63292766 0.8347072 -0.64691818 0.76091397 -0.59202474
+		 0.84816241 -0.60930103 0.84110039 -0.58129686 0.85461116 -0.53946292 0.51488411 -0.68161511
+		 0.46829808 -0.0027038455 0.474251 -0.0058359355 0.56102043 -0.0079434402 0.56896508
+		 0.29349577 0.59364676 0.00039281324 0.46786043 -0.0029010735 0.54992115 0.010195103
+		 0.4468632 0.0064058155 0.51333797 -0.00010575727 0.53922242 0.0033371635 0.46169081
+		 -0.78346056 0.80632198 -0.62477052 0.51616281 0.014033677 0.39559147 0.32461011 0.51245528
+		 0.026126215 0.43662128 0.35056326 0.51950365 0.020412829 0.42263648 0.32809004 0.54093456
+		 0.014440263 0.47887707 0.018687513 0.42762753 0.01232104 0.48885268 0.016451016 0.43307486
+		 -0.60863227 0.62108636 -0.59456086 0.6054374 -0.59018075 0.89436817 -0.58301961 0.58091801
+		 -0.58831644 0.59829801 -0.61577505 0.82990843 -0.60802239 0.54998946 -0.59682494
+		 0.5572176 -0.58996892 0.56421828 -0.54816937 0.52499586 -0.57271129 0.53369993 -0.47568813
+		 0.5559389 -0.55521435 0.67328799 -0.53148472 0.51259214 -0.54700315 0.66807055 -0.53068811
+		 0.6467824 -0.51469868 0.47151214 -0.52195638 0.50063139 -0.52147925 0.6264168 -0.51491547
+		 0.5771147 -0.45931658 0.694125 -0.55603707 0.41960171 -0.56305289 0.48336184 -0.58268917
+		 0.45943534 -0.5380373 0.43174282 -0.53902322 0.5104568 -0.55719918 0.49038672 -0.52678168
+		 0.44351372 -0.5275656 0.53006512 -0.49435121 0.53663695 -0.49330437 0.54779083 -0.37040374
+		 0.58975691 -0.49262875 0.69425279 -0.49580342 0.52117223 -0.49325037 0.68530858 -0.49502891
+		 0.65968013 -0.50051093 0.47102779 -0.49718729 0.50643021 -0.49672794 0.63513321 -0.50082278
+		 0.57570791 -0.37356248 0.6426965 -0.50758815 0.41240099 -0.51017326 0.4666847 -0.51728827
+		 0.41709873 -0.50538808 0.42433694;
+	setAttr ".uvtk[250:447]" -0.5067296 0.49602973 -0.50921422 0.47388375 -0.50370884
+		 0.43762502 -0.50476146 0.51906419 -0.019850735 0.48112905 -0.018255197 0.48678911
+		 0.26822132 0.60616684 -0.021204758 0.58205295 -0.022075988 0.47324488 -0.022729937
+		 0.5734868 -0.025122557 0.56003904 -0.030137204 0.44729266 -0.024224088 0.4656215
+		 -0.027424198 0.54705924 -0.033628646 0.51568985 0.23584217 0.54407483 -0.044819247
+		 0.42118523 -0.051101856 0.45907986 -0.059477679 0.43407992 -0.041044731 0.42638198
+		 -0.044796359 0.47665614 -0.048651207 0.46580523 -0.037513044 0.43188766 -0.041193984
+		 0.48758703 -0.74486852 0.81787753 -0.66461682 0.81246662 -0.65740335 0.80796021 -0.65319228
+		 0.80364609 -0.64967167 0.79317892 -0.65447915 0.78316337 -0.65917653 0.77897507 -0.66682714
+		 0.77465755 -0.74605447 0.77241886 -0.68003845 0.4647724 -0.53749955 0.51141697 0.27468693
+		 0.60059398 -0.36654207 0.58441889 -0.47228536 0.55053306 0.3445043 0.52685499 0.016082158
+		 0.4691031 -0.021015123 0.58311874 0.28696591 0.5992521 -0.49197021 0.70371723 -0.57121205
+		 0.68343347 0.32121652 0.55164868 0.31101316 0.56597233 0.32499379 0.5460394 0.29533264
+		 0.58777928 0.29999775 0.58135235 0.29045773 0.59446186 -0.71401 0.8960458 -0.6031239
+		 0.92595041 0.40882373 0.77215767 0.07763689 0.85044998 -0.092036836 0.82647765 -0.63364863
+		 0.68516529 -0.17490393 0.69056129 -0.10607553 0.64490747 0.28755805 0.77673203 -0.46425149
+		 0.7439751 0.13899824 0.85062945 0.23335223 0.81072974 -0.57581437 0.75323147 -0.73286104
+		 0.74501371 -0.57840097 0.71642166 -0.72273993 0.66698748 -0.65802044 0.57343662 -0.47035894
+		 0.57222486 -0.17436677 0.59061366 -0.097593591 0.62540227 -0.52822351 0.64843649
+		 -0.51007712 0.62413359 -0.53577316 0.65917057 -0.48378804 0.58960068 -0.49139413
+		 0.59947401 -0.47593966 0.57944787 -0.72192216 0.68096739 -0.54582047 0.66712052 -0.53052127
+		 0.64395136 -0.5122453 0.61940879 -0.53814197 0.65491551 -0.4857659 0.58452648 -0.49342254
+		 0.5944702 -0.47787145 0.57434088 -0.45049927 0.55294555 -0.63630348 0.58986247 0.13659126
+		 0.3766461 0.22322071 0.37639201 0.075941585 0.76632595 0.27481681 0.39222562 0.39211211
+		 0.39592612 -0.092889503 0.76124924 -0.77215147 0.81755823 -0.65683115 0.80447727
+		 -0.63070112 0.76953799 -0.05528437 0.40618458 -0.51481575 0.38572219 -0.58124709
+		 0.40090266 -0.51978123 0.75785935 0.23032431 0.55169708 0.0091106854 0.40797195 -0.37697682
+		 0.65044552 -0.46262267 0.69952387 0.33041674 0.50484478 0.030744717 0.40856144 0.33448166
+		 0.53443176 0.32772601 0.54555649 0.31754005 0.56004781 0.33146667 0.53979748 0.30187792
+		 0.58212388 0.30654395 0.57563913 0.29699433 0.58883709 -0.004927475 0.47882906 -0.59976709
+		 0.83112049 -0.55986267 0.80873901 -0.5713836 0.79725111 -0.57098079 0.82519484 -0.56434864
+		 0.82068962 -0.58193225 0.79281878 -0.58262151 0.82935429 -0.59896189 0.78876001 -0.64275736
+		 0.77188796 -0.12523203 0.77618831 -0.12096769 0.78843385 -0.10504618 0.75863916 -0.11472943
+		 0.76369071 -0.11499444 0.79363501 -0.089330733 0.75344574 -0.10461487 0.79905641
+		 -0.067385063 0.7497673 -0.089593962 0.80296451 0.014929186 0.81660604 -0.064450517
+		 0.6131556 -0.12055194 0.79263145 -0.12476989 0.78051001 -0.10468525 0.76301336 -0.11431737
+		 0.76806682 -0.11463009 0.79775673 -0.089053072 0.75779372 -0.10433733 0.80307519
+		 -0.064746723 0.73228818 -0.62474036 0.43433335 -0.5751701 0.80254245 -0.56372225
+		 0.81395113 -0.57475007 0.8303172 -0.56817043 0.82583463 -0.58565235 0.79814827 -0.58629769
+		 0.83445811 -0.60257626 0.79413402 -0.60094893 0.85630208 -0.59561765 0.79912102 -0.62862986
+		 0.81682342 -0.59044027 0.89823616 -0.60522926 0.81477869 -0.59876132 0.81114078 -0.63572335
+		 0.81656283 -0.76959336 0.78333139 -0.6238631 0.83716011 -0.63397676 0.76655275 -0.61816955
+		 0.77591759 -0.60795796 0.78367949 -0.65497363 0.75740325 -0.78153038 0.81157357 0.033036705
+		 0.78806716 -0.075742699 0.8432498 -0.079367146 0.76442724 -0.090381138 0.75617236
+		 -0.064267822 0.77154642 -0.077298298 0.70768738 -0.10465359 0.79530579 -0.095208213
+		 0.71363461 -0.072011203 0.70688921 0.0097670099 0.80531341 -0.097237088 0.74885523
+		 -0.10464036 0.73304266 -0.10060354 0.71878439 -0.064754084 0.85562426 -0.10199446
+		 0.78067613 -0.05773215 0.68902874 -0.043265022 0.75056165 -0.089494228 0.83187586
+		 -0.11491615 0.82138926 -0.12509216 0.80924994 -0.10527481 0.82652992 -0.11492173
+		 0.79170847 -0.12079052 0.79678303 -0.047850914 0.66437721 -0.61944199 0.64707333
+		 -0.59308314 0.90163916 -0.60522836 0.61287618 -0.61201185 0.54195368 -0.60907406
+		 0.83702737 -0.58093822 0.85058767 -0.56900352 0.86530882 -0.59171641 0.8441152 -0.63772303
+		 0.80859119 -0.57914495 0.8871519 -0.57290822 0.8805896;
+createNode reference -n "DJI_Mavic_2_top_down:Mavik_ReferenceRN";
+	rename -uid "A029877C-4F6F-E009-EFF8-7A860028178C";
+	setAttr -s 61 ".phl";
+	setAttr ".phl[1]" 0;
+	setAttr ".phl[2]" 0;
+	setAttr ".phl[3]" 0;
+	setAttr ".phl[4]" 0;
+	setAttr ".phl[5]" 0;
+	setAttr ".phl[6]" 0;
+	setAttr ".phl[7]" 0;
+	setAttr ".phl[8]" 0;
+	setAttr ".phl[9]" 0;
+	setAttr ".phl[10]" 0;
+	setAttr ".phl[11]" 0;
+	setAttr ".phl[12]" 0;
+	setAttr ".phl[13]" 0;
+	setAttr ".phl[14]" 0;
+	setAttr ".phl[15]" 0;
+	setAttr ".phl[16]" 0;
+	setAttr ".phl[17]" 0;
+	setAttr ".phl[18]" 0;
+	setAttr ".phl[19]" 0;
+	setAttr ".phl[20]" 0;
+	setAttr ".phl[21]" 0;
+	setAttr ".phl[22]" 0;
+	setAttr ".phl[23]" 0;
+	setAttr ".phl[24]" 0;
+	setAttr ".phl[25]" 0;
+	setAttr ".phl[26]" 0;
+	setAttr ".phl[27]" 0;
+	setAttr ".phl[28]" 0;
+	setAttr ".phl[29]" 0;
+	setAttr ".phl[30]" 0;
+	setAttr ".phl[31]" 0;
+	setAttr ".phl[32]" 0;
+	setAttr ".phl[33]" 0;
+	setAttr ".phl[34]" 0;
+	setAttr ".phl[35]" 0;
+	setAttr ".phl[36]" 0;
+	setAttr ".phl[37]" 0;
+	setAttr ".phl[38]" 0;
+	setAttr ".phl[39]" 0;
+	setAttr ".phl[40]" 0;
+	setAttr ".phl[41]" 0;
+	setAttr ".phl[42]" 0;
+	setAttr ".phl[43]" 0;
+	setAttr ".phl[44]" 0;
+	setAttr ".phl[45]" 0;
+	setAttr ".phl[46]" 0;
+	setAttr ".phl[47]" 0;
+	setAttr ".phl[48]" 0;
+	setAttr ".phl[49]" 0;
+	setAttr ".phl[50]" 0;
+	setAttr ".phl[51]" 0;
+	setAttr ".phl[52]" 0;
+	setAttr ".phl[53]" 0;
+	setAttr ".phl[54]" 0;
+	setAttr ".phl[55]" 0;
+	setAttr ".phl[56]" 0;
+	setAttr ".phl[57]" 0;
+	setAttr ".phl[58]" 0;
+	setAttr ".phl[59]" 0;
+	setAttr ".phl[60]" 0;
+	setAttr ".phl[61]" 0;
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN"
+		"Mavik_ReferenceRN" 0
+		"Mavik_ReferenceRN" 144
+		0 "|Mavik_Reference:F_R_Blade_BracketShape1" "|Mavik_ReferenceRNfosterParent1|..:transform25" 
+		"-s -r "
+		0 "|Mavik_ReferenceRNfosterParent1|..:transform25" "|Mavik_Reference:F_R_Arm_Group|Mavik_Reference:F_R_Blade_Bracket1" 
+		"-s -r "
+		2 "|Mavik_Reference:imagePlane1" "visibility" " 0"
+		2 "|Mavik_Reference:imagePlane1" "translate" " -type \"double3\" 0.40379320893239262 -11.11963059577478674 0"
+		
+		2 "|Mavik_Reference:imagePlane1" "displayHandle" " 0"
+		2 "|Mavik_Reference:imagePlane1|Mavik_Reference:imagePlaneShape1" "visibility" 
+		" -k 0 1"
+		2 "|Mavik_Reference:pCube1" "scalePivot" " -type \"double3\" 0 0 0"
+		2 "|Mavik_Reference:pCube1" "scalePivotTranslate" " -type \"double3\" 0 0 0"
+		
+		2 "|Mavik_Reference:pCube1|Mavik_Reference:transform2" "visibility" " 1"
+		2 "|Mavik_Reference:polySurface1" "scalePivot" " -type \"double3\" 0 0 0"
+		
+		2 "|Mavik_Reference:polySurface1" "scalePivotTranslate" " -type \"double3\" 0 0 0"
+		
+		2 "|Mavik_Reference:polySurface1|Mavik_Reference:transform3" "visibility" 
+		" 1"
+		2 "|Mavik_Reference:pCylinder1" "scalePivot" " -type \"double3\" 0 0 0"
+		2 "|Mavik_Reference:pCylinder1" "scalePivotTranslate" " -type \"double3\" 0 0 0"
+		
+		2 "|Mavik_Reference:pCylinder1|Mavik_Reference:transform4" "visibility" " 1"
+		
+		2 "|Mavik_Reference:pCylinder2" "scalePivot" " -type \"double3\" 0 0 0"
+		2 "|Mavik_Reference:pCylinder2" "scalePivotTranslate" " -type \"double3\" 0 0 0"
+		
+		2 "|Mavik_Reference:pCylinder2|Mavik_Reference:transform1" "visibility" " 1"
+		
+		2 "|Mavik_Reference:F_R_Arm_Group" "scalePivot" " -type \"double3\" 0 0 0"
+		
+		2 "|Mavik_Reference:F_R_Arm_Group" "scalePivotTranslate" " -type \"double3\" 0 0 0"
+		
+		2 "|Mavik_Reference:F_R_Arm_Group|Mavik_Reference:F_R_Blade_Bracket1" "visibility" 
+		" 1"
+		2 "|Mavik_Reference:F_R_Arm_Group|Mavik_Reference:F_R_Blade_Bracket1" "translate" 
+		" -type \"double3\" 7.18183311778353151 1.72544037250939564 2.28210197522440428"
+		2 "|Mavik_Reference:F_R_Arm_Group|Mavik_Reference:F_R_Blade_Bracket1" "rotate" 
+		" -type \"double3\" 0 33.90479738917494501 0"
+		2 "|Mavik_Reference:F_R_Arm_Group|Mavik_Reference:F_R_Blade_Bracket1" "scale" 
+		" -type \"double3\" 0.33247557481066115 0.12753640350504097 0.39587703597115836"
+		2 "|:transform25|Mavik_Reference:F_R_Blade_BracketShape1" "intermediateObject" 
+		" 1"
+		2 "|:transform25|Mavik_Reference:F_R_Blade_BracketShape1" "instObjGroups.objectGroups" 
+		" -s 2"
+		2 "|:transform25|Mavik_Reference:F_R_Blade_BracketShape1" "uvPivot" " -type \"double2\" 0.75 0.125"
+		
+		2 "|:transform25|Mavik_Reference:F_R_Blade_BracketShape1" "uvSet[0].uvSetName" 
+		" -type \"string\" \"map1\""
+		2 "|:transform25|Mavik_Reference:F_R_Blade_BracketShape1" "pnts" " -s 10"
+		
+		2 "|:transform25|Mavik_Reference:F_R_Blade_BracketShape1" "pt[8:15]" " -type \"float3\" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+		
+		2 "|:transform25|Mavik_Reference:F_R_Blade_BracketShape1" "pnts[20]" " -type \"float3\" 0 0 0"
+		
+		2 "|:transform25|Mavik_Reference:F_R_Blade_BracketShape1" "pnts[28]" " -type \"float3\" 0 0 0"
+		
+		2 "|Mavik_Reference:pCube2" "visibility" " 0"
+		2 "|Mavik_Reference:imagePlane2" "visibility" " 0"
+		2 "|Mavik_Reference:imagePlane2" "translate" " -type \"double3\" 33.4040312990367525 1.77729155891946355 -3.87127271293391573"
+		
+		2 "|Mavik_Reference:imagePlane2" "scale" " -type \"double3\" 1.76653198765717789 1.76653198765717789 1.59968984627123767"
+		
+		2 "|Mavik_Reference:imagePlane2|Mavik_Reference:imagePlaneShape2" "visibility" 
+		" -k 0 1"
+		2 "|Mavik_Reference:imagePlane3" "visibility" " 0"
+		2 "|Mavik_Reference:imagePlane3" "translate" " -type \"double3\" 0.034781559801651193 2.32868850802596405 -28.13205214709851631"
+		
+		2 "|Mavik_Reference:imagePlane3" "scale" " -type \"double3\" 2.95208544347238755 2.95208544347238755 1"
+		
+		2 "|Mavik_Reference:imagePlane3|Mavik_Reference:imagePlaneShape3" "visibility" 
+		" -k 0 1"
+		2 "|Mavik_Reference:pCylinder3" "visibility" " 0"
+		2 "|Mavik_Reference:pCylinder3" "wireColorRGB" " -type \"float3\" 0 0 0"
+		2 "|Mavik_Reference:pCylinder3" "useObjectColor" " 1"
+		2 "|Mavik_Reference:pCylinder3" "objectColor" " 3"
+		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "visibility" 
+		" -k 0 1"
+		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "ghosting" 
+		" 0"
+		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "wireColorRGB" 
+		" -type \"float3\" 0 0 0"
+		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "useObjectColor" 
+		" 1"
+		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "objectColor" 
+		" 3"
+		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "hideOnPlayback" 
+		" 0"
+		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "lodVisibility" 
+		" 1"
+		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "castsShadows" 
+		" 1"
+		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "geometryAntialiasingOverride" 
+		" 0"
+		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "primaryVisibility" 
+		" 1"
+		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "displayImmediate" 
+		" 0"
+		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "displayColors" 
+		" 0"
+		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "displayColorChannel" 
+		" -type \"string\" \"Ambient+Diffuse\""
+		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "ignoreHwShader" 
+		" 0"
+		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "doubleSided" 
+		" 1"
+		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "displayVertices" 
+		" 0"
+		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "displayBorders" 
+		" 0"
+		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "displayEdges" 
+		" 0"
+		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "displayCenter" 
+		" 0"
+		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "displayTriangles" 
+		" 0"
+		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "displayUVs" 
+		" 0"
+		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "displayNonPlanar" 
+		" 0"
+		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "displayNormal" 
+		" 0"
+		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "displayTangent" 
+		" 0"
+		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "materialBlend" 
+		" 0"
+		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "displayInvisibleFaces" 
+		" 0"
+		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "hiddenInOutliner" 
+		" 1"
+		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "useOutlinerColor" 
+		" 0"
+		2 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape" "outlinerColor" 
+		" -type \"float3\" 0 0 0"
+		2 "Mavik_Reference:groupParts5" "inputRemoveComponent" " -type \"componentList\" 1 \"f[0:167]\""
+		
+		2 "Mavik_Reference:groupParts5" "groupId" " 36"
+		3 "Mavik_Reference:groupId9.groupId" "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "Mavik_Reference:deleteComponent2.outputGeometry" "|:transform25|Mavik_Reference:F_R_Blade_BracketShape1.inMesh" 
+		""
+		3 "|:transform25|Mavik_Reference:F_R_Blade_BracketShape1.instObjGroups" ":initialShadingGroup.dagSetMembers" 
+		"-na"
+		3 "Mavik_Reference:groupId9.message" ":initialShadingGroup.groupNodes" "-na"
+		
+		3 "Mavik_Reference:groupId9.groupId" "Mavik_Reference:groupParts5.groupId" 
+		""
+		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCube1.translateX" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[1]" ""
+		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCube1.translateY" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[2]" ""
+		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCube1.translateZ" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[3]" ""
+		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCube1.scaleX" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[4]" ""
+		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCube1.scaleY" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[5]" ""
+		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCube1.scaleZ" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[6]" ""
+		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCube1.visibility" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[7]" ""
+		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCube1.rotateX" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[8]" ""
+		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCube1.rotateY" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[9]" ""
+		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCube1.rotateZ" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[10]" ""
+		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:polySurface1.translateX" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[11]" ""
+		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:polySurface1.translateY" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[12]" ""
+		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:polySurface1.translateZ" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[13]" ""
+		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:polySurface1.scaleX" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[14]" ""
+		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:polySurface1.scaleY" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[15]" ""
+		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:polySurface1.scaleZ" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[16]" ""
+		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:polySurface1.visibility" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[17]" ""
+		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:polySurface1.rotateX" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[18]" ""
+		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:polySurface1.rotateY" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[19]" ""
+		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:polySurface1.rotateZ" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[20]" ""
+		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCylinder1.translateX" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[21]" ""
+		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCylinder1.translateY" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[22]" ""
+		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCylinder1.translateZ" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[23]" ""
+		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCylinder1.scaleX" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[24]" ""
+		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCylinder1.scaleY" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[25]" ""
+		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCylinder1.scaleZ" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[26]" ""
+		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCylinder1.visibility" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[27]" ""
+		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCylinder1.rotateX" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[28]" ""
+		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCylinder1.rotateY" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[29]" ""
+		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCylinder1.rotateZ" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[30]" ""
+		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCylinder2.translateX" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[31]" ""
+		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCylinder2.translateY" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[32]" ""
+		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCylinder2.translateZ" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[33]" ""
+		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCylinder2.scaleX" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[34]" ""
+		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCylinder2.scaleY" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[35]" ""
+		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCylinder2.scaleZ" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[36]" ""
+		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCylinder2.visibility" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[37]" ""
+		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCylinder2.rotateX" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[38]" ""
+		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCylinder2.rotateY" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[39]" ""
+		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCylinder2.rotateZ" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[40]" ""
+		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:F_R_Arm_Group.translateX" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[41]" ""
+		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:F_R_Arm_Group.translateY" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[42]" ""
+		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:F_R_Arm_Group.translateZ" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[43]" ""
+		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:F_R_Arm_Group.scaleX" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[44]" ""
+		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:F_R_Arm_Group.scaleY" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[45]" ""
+		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:F_R_Arm_Group.scaleZ" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[46]" ""
+		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:F_R_Arm_Group.visibility" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[47]" ""
+		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:F_R_Arm_Group.rotateX" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[48]" ""
+		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:F_R_Arm_Group.rotateY" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[49]" ""
+		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:F_R_Arm_Group.rotateZ" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[50]" ""
+		5 3 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|Mavik_Reference:pCylinder3|Mavik_Reference:pCylinder3Shape.instObjGroups" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[51]" ""
+		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|:transform25|Mavik_Reference:F_R_Blade_BracketShape1.inMesh" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[52]" ""
+		5 3 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|:transform25|Mavik_Reference:F_R_Blade_BracketShape1.worldMatrix" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[53]" ""
+		5 3 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|:transform25|Mavik_Reference:F_R_Blade_BracketShape1.worldMatrix" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[54]" ""
+		5 3 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|:transform25|Mavik_Reference:F_R_Blade_BracketShape1.instObjGroups.objectGroups[0]" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[55]" ""
+		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|:transform25|Mavik_Reference:F_R_Blade_BracketShape1.instObjGroups.objectGroups[0].objectGroupId" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[56]" ""
+		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|:transform25|Mavik_Reference:F_R_Blade_BracketShape1.instObjGroups.objectGroups[0].objectGrpColor" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[57]" ""
+		5 3 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|:transform25|Mavik_Reference:F_R_Blade_BracketShape1.outMesh" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[58]" ""
+		5 3 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|:transform25|Mavik_Reference:F_R_Blade_BracketShape1.compInstObjGroups.compObjectGroups[0]" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[59]" ""
+		5 4 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "|:transform25|Mavik_Reference:F_R_Blade_BracketShape1.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[60]" ""
+		5 3 "DJI_Mavic_2_top_down:Mavik_ReferenceRN" "Mavik_Reference:deleteComponent2.outputGeometry" 
+		"DJI_Mavic_2_top_down:Mavik_ReferenceRN.placeHolderList[61]" "DJI_Mavic_2_top_down:Mavik_Reference:F_R_Blade_BracketShape1.i";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -59836,10 +59708,9 @@ connectAttr "polyTweakUV278.out" "polySurfaceShape121.i";
 connectAttr "groupId188.id" "polySurfaceShape121.iog.og[0].gid";
 connectAttr "blinn1SG.mwc" "polySurfaceShape121.iog.og[0].gco";
 connectAttr "polyTweakUV278.uvtk[0]" "polySurfaceShape121.uvst[0].uvtw";
-connectAttr "polyTweakUV351.out" "polySurfaceShape123.i";
+connectAttr "deleteComponent330.og" "polySurfaceShape123.i";
 connectAttr "groupId190.id" "polySurfaceShape123.iog.og[0].gid";
 connectAttr "blinn1SG.mwc" "polySurfaceShape123.iog.og[0].gco";
-connectAttr "polyTweakUV351.uvtk[0]" "polySurfaceShape123.uvst[0].uvtw";
 connectAttr "groupParts171.og" "polySurfaceShape124.i";
 connectAttr "groupId191.id" "polySurfaceShape124.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "polySurfaceShape124.iog.og[0].gco";
@@ -61673,8 +61544,6 @@ connectAttr "polyExtrudeEdge287.out" "polyTweak406.ip";
 connectAttr "deleteComponent65.og" "deleteComponent156.ig";
 connectAttr "deleteComponent127.og" "deleteComponent157.ig";
 connectAttr "DJI_Mavic_2_top_down:renderLayerManager.rlmi[0]" "DJI_Mavic_2_top_down:defaultRenderLayer.rlid"
-		;
-connectAttr "DJI_Mavic_2_top_down:Mavik_ReferenceRNfosterParent1.msg" "DJI_Mavic_2_top_down:Mavik_ReferenceRN.fp"
 		;
 connectAttr "DJI_Mavic_2_top_down:blinn1.oc" "DJI_Mavic_2_top_down:standardSurface2SG.ss"
 		;
@@ -66733,9 +66602,8 @@ connectAttr "polyMapCut712.out" "polyMapCut713.ip";
 connectAttr "polyMapCut713.out" "polyMapCut714.ip";
 connectAttr "polyMapCut714.out" "polyMapCut715.ip";
 connectAttr "polyMapCut715.out" "polyTweakUV349.ip";
-connectAttr "deleteComponent330.og" "polyTweakUV350.ip";
-connectAttr "polyTweakUV350.out" "polyMapCut716.ip";
-connectAttr "polyMapCut716.out" "polyTweakUV351.ip";
+connectAttr "DJI_Mavic_2_top_down:Mavik_ReferenceRNfosterParent1.msg" "DJI_Mavic_2_top_down:Mavik_ReferenceRN.fp"
+		;
 connectAttr "DJI_Mavic_2_top_down:standardSurface2SG.pa" ":renderPartition.st" -na
 		;
 connectAttr "blinn1SG.pa" ":renderPartition.st" -na;
@@ -67029,4 +66897,4 @@ connectAttr "groupId201.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId203.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId204.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId205.msg" ":initialShadingGroup.gn" -na;
-// End of Drone Final Model.ma
+// End of Drone Final Model.0010.ma
